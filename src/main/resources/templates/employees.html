@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<h1>An overview of our employees</h1>
+<table>
+    <tr
+        th:each="employee : ${employees}">
+        <td th:text="${employee.getId()}"></td>
+        <td th:text="${employee.getEmployeeName()}"></td>
+        <td th:text="${employee.getJob()}"></td>
+        <td th:text="${employee.getManager()}"></td>
+        <td th:text="${employee.getHireDate()}"></td>
+        <td th:text="${employee.getSalary()}"></td>
+        <td th:text="${employee.getCommission()}"></td>
+        <td th:text="${employee.getDepartmentNr()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
